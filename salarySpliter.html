@@ -201,16 +201,18 @@ function give(){
 }
 
 function sum(){
-    if(input.value < 10000){
-        error.innerHTML = '*salary must 10000 or above '
-    }
-    else{  
+    if(input.value >= 10000){
         necessities();
         financial();
         long();
         education();
         play();
         give();
+        error.innerHTML = '';
+    }
+    else{  
+        error.innerHTML = '*salary must 10000 or above'
+       
     }
 }
     </script>
